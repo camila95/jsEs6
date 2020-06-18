@@ -123,6 +123,34 @@ const crearObjeto = (nombre, raza) =>{
 //document.write(crearObjeto('Lola', 'Golden').mostrarInfo());
 
 //Parametros Rest y Spread
+//Parametros Rest: Recibir datgos ...datos
+const mostrarDatos = (...datos) => {
+    console.log(datos);
+}
+//mostrarDatos('México', 'Colombia', 22);
 
+//Pasar datos
+const parametrosSpread = ['Ana', 'Alberto', 'Andrés', 'Alvaro', 'Alejo', 'Adrian'];
+//mostrarDatos(...parametrosSpread);
 
-    
+//Promesas
+const promesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const exito = false;
+        if(exito) {
+            resolve('Éxito!!...');
+        } else {
+            reject('**Error**');
+        }
+    }, 4000);
+});
+
+promesa.then((msj) => {
+    alert(msj);
+});
+
+promesa.catch((msj) => {
+    alert(msj);
+});
+
+//Mh para cadenas de txt
